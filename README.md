@@ -1,20 +1,22 @@
-# car
+# Car Application
 
 ##### App that displays searchable car database. , 8/4/2015
 
-#### By Logan Wu & Kyle Pratuch
+#### By Logan Wu & Jeff Austin
 
 ## Description
+Application that allows users to buy or sell cars.
 
 ## Setup
+You dependencies will include Silex 1.1 and Twig 1.0. 
 
 ## Technologies Used
 
-PHP, HTML, CSS, Silex
+PHP, HTML, CSS, Silex, Twig
 
 ## Legal
 
-Copyright (c) 2015 Logan Wu, Kyle Pratuch
+Copyright (c) 2015 Logan Wu, Jeff Austin
 
 This software is licensed under the MIT license.
 
