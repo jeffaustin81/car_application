@@ -13,7 +13,7 @@
                     {% for car in cars %}
                         <li>{{ car.getMakeModel }}
                             <ul><li>Price: ${{ car.getPrice }}</li>
-                                <li>Miles: {{ car.getMiles }}miles</li>
+                                <li>Miles: {{ car.getMiles }} miles</li>
                                 <li>{% if car.getImage is empty %}
                                         No image provided.
                                     {% else %}
@@ -47,10 +47,20 @@
                 <input id='image_path' name='image_path' class="form-control" type='text'>
             </div>
 
-            <div class="btn-group" role="group" aria-label="...">
-                <button type='submit' class="btn btn-info">Add Car</button>
+            <div class="btn-group" role="group">
+                <button type='submit' class="btn btn-primary">Add a Car</button>
             </div>
         </form>
+
+        <form action='/delete_car' method='post'>
+            <button type='submit' class='btn btn-default'>Clear List</button>
+        </form>
+
+        <div class="btn-group" role="group">
+            <a href="/">
+                <button type='button' class="btn btn-success">Home</button>
+            </a>
+        </div>
     </div>
 </body>
 </html>
