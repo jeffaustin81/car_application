@@ -20,8 +20,12 @@
 
     $app->get('/post', function() use ($app) {
 
-    return $app['twig']->render('cars.html.twig', array('cars' => Car::getAll()));
+        return $app['twig']->render('cars.html.twig', array('cars' => Car::getAll()));
 
+    });
+
+    $app->get("/search", function() use ($app) {
+        return $app['twig']->render('search_cars.html.twig');
     });
 
     $app->post("/cars", function() use ($app) {
@@ -50,10 +54,6 @@
             }
         }
         return $app['twig']->render('car_posting.html.twig', array('cars' => $cars_matching_search));
-    });
-
-    $app->get("/search", function() use ($app) {
-        return $app['twig']->render('search_cars.html.twig');
     });
 
     return $app;
