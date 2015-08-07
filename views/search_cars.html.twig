@@ -8,13 +8,21 @@
         <h1>Find a Car!</h1>
         <form action='/view_car'>
             <div class='form-group'>
-                <label for='price'>Enter Maximum Price:</label>
+                <label for='price'>Enter Maximum Price ($):</label>
                 <input id='price' name='price' class='form-control' type='number'>
+            </div>
+            <div class='form-group'>
                 <label for='miles'>Enter Maximum Miles:</label>
                 <input id='miles' name='miles' class='form-control' type='number'>
             </div>
             <div class="btn-group" role="group" aria-label="...">
-                <button type='submit' class="btn btn-primary">Search</button>
+                <button type='submit' class="btn btn-danger">Search</button>
+            </div>
+
+            <div class="btn-group" role="group">
+                <a href="/">
+                    <button type='button' class="btn btn-success">Home</button>
+                </a>
             </div>
         </form>
     </div>

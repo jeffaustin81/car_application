@@ -7,18 +7,34 @@
     <div class="container">
     <h1>Car Listing</h1>
 
-
-        {% if cars_matching_search is empty %}
-            <h2>No matching result!</h2>";
-        {% else %}
-            {% for car in cars_matching_search %}
-                <li> {{ car.getMakeModel }} </li>
-                <ul>
-                    <li>${{ car.getPrice }} </li>
-                    <li>Miles: {{ car.getMiles }}</li>
-                    <li><img src= {{ car.getImage }} width='300'></li>
-                </ul>";
-            {% endfor %}
+        {% if cars is empty %}
+            <h3>No matching result!</h3>
+            {% else %}
+                {% for car in cars %}
+                    <li> {{ car.getMakeModel }} </li>
+                    <ul>
+                        <li>Price: ${{ car.getPrice }} </li>
+                        <li>Miles: {{ car.getMiles }} miles</li>
+                        <li>{% if car.getImage is empty %}
+                                No image provided.
+                            {% else %}
+                            <img src="{{ car.getImage }}" width="300px" alt="car image"></img>
+                            {% endif %}
+                        </li>
+                    </ul>
+                {% endfor %}
         {% endif %}
+
+        <div class="btn-group" role="group">
+            <a href="/search">
+                <button type='button' class="btn btn-default">Go Back</button>
+            </a>
+        </div>
+
+        <div class="btn-group" role="group">
+            <a href="/">
+                <button type='button' class="btn btn-success">Home</button>
+            </a>
+        </div>
     </body>
  </html>
